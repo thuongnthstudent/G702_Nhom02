@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 InputStream inputStream = getContentResolver().openInputStream(uri);
                                 Bitmap bitmap= BitmapFactory.decodeStream(inputStream);
-                                imvPhoto.setImageBitmap(bitmap);
+                                imvAnh.setImageBitmap(bitmap);
                                 //File không tồn tại, hoặc không hợp lệ
                             } catch (FileNotFoundException e){
                                 e.printStackTrace();

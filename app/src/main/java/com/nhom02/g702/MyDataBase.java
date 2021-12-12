@@ -53,7 +53,7 @@ public class MyDataBase extends SQLiteOpenHelper {
         return db.rawQuery(sql,null);
     }
 
-    public boolean insertData(String name, String des, byte[] photo) {
+    public boolean insertData(String id, String ten, String nhaxb, String solan, String gia,  byte[] anh) {
         try {
             SQLiteDatabase db = getWritableDatabase();
             String sql = "INSERT INTO " + TBL_NAME + " VALUES(null, ?, ?, ?, ?, ?)";
@@ -62,7 +62,7 @@ public class MyDataBase extends SQLiteOpenHelper {
             statement.bindString(2, ten);
             statement.bindString(3, nhaxb);
             statement.bindString(4, solan);
-            statement.bindDouble(5, gia);
+            statement.bindString(5, gia);
             statement.bindBlob(6, anh);
             statement.executeInsert();
             return true;

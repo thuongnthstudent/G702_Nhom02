@@ -5,7 +5,7 @@ public class Book {
     private String w_ten;
     private String w_nhaxb;
     private int w_solantb;
-    private double w_gia;
+    private String w_gia;
     private byte[] w_anh;
 
     public int getW_id() {
@@ -40,11 +40,11 @@ public class Book {
         this.w_solantb = w_solantb;
     }
 
-    public double getW_gia() {
+    public String getW_gia() {
         return w_gia;
     }
 
-    public void setW_gia(double w_gia) {
+    public void setW_gia(String w_gia) {
         this.w_gia = w_gia;
     }
 
@@ -58,7 +58,7 @@ public class Book {
 
 
 
-    public Book(int w_id, String w_ten, String w_nhaxb, int w_solantb, double w_gia, byte[] w_anh) {
+    public Book(int w_id, String w_ten, String w_nhaxb, int w_solantb, String w_gia, byte[] w_anh) {
         this.w_id = w_id;
         this.w_ten = w_ten;
         this.w_nhaxb = w_nhaxb;
