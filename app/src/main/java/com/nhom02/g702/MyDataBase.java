@@ -31,7 +31,7 @@ public class MyDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql="CREATE TABLE IF NOT EXISTS "+ TBL_NAME+"("+COL_W_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String sql="CREATE TABLE IF NOT EXISTS "+ TBL_NAME+"("+COL_W_ID+" INT(20), " +
                 COL_W_TEN+" VARCHAR(100), "+ COL_W_NHAXB +" VARCHAR(200), "+ COL_W_SOLAN +" VARCHAR(100), "
                 + COL_W_GIA +" VARCHAR(200), "+ COL_W_ANH+ " BLOB)";
         sqLiteDatabase.execSQL(sql);
@@ -56,7 +56,7 @@ public class MyDataBase extends SQLiteOpenHelper {
     public boolean insertData(String id, String ten, String nhaxb, String solan, String gia,  byte[] anh) {
         try {
             SQLiteDatabase db = getWritableDatabase();
-            String sql = "INSERT INTO " + TBL_NAME + " VALUES(null, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO " + TBL_NAME + " VALUES(?, ?, ?, ?, ?, ?)";
             SQLiteStatement statement = db.compileStatement(sql);
             statement.bindString(1,id);
             statement.bindString(2, ten);
