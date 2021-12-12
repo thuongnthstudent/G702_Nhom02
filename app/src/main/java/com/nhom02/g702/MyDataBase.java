@@ -15,7 +15,7 @@ public class MyDataBase extends SQLiteOpenHelper {
     private static final int DB_VERSION=1;
     private static final String DB_NAME="book.sqlite";
 
-    public static final String TBL_NAME="Warranty";
+    public static final String TBL_NAME="Book";
 
     private static final String COL_W_ID= "W_Id";
     private static final String COL_W_TEN= "W_Ten";
@@ -32,7 +32,8 @@ public class MyDataBase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sql="CREATE TABLE IF NOT EXISTS "+ TBL_NAME+"("+COL_W_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COL_W_TEN+" VARCHAR(100), "+ COL_W_DES+" VARCHAR(200), "+ COL_W_ANH+ " BLOB)";
+                COL_W_TEN+" VARCHAR(100), "+ COL_W_NHAXB +" VARCHAR(200), "+ COL_W_SOLAN +" VARCHAR(100), "
+                + COL_W_GIA +" VARCHAR(200), "+ COL_W_ANH+ " BLOB)";
         sqLiteDatabase.execSQL(sql);
     }
 
@@ -55,11 +56,14 @@ public class MyDataBase extends SQLiteOpenHelper {
     public boolean insertData(String name, String des, byte[] photo) {
         try {
             SQLiteDatabase db = getWritableDatabase();
-            String sql = "INSERT INTO " + TBL_NAME + " VALUES(null, ?, ?, ?)";
+            String sql = "INSERT INTO " + TBL_NAME + " VALUES(null, ?, ?, ?, ?, ?)";
             SQLiteStatement statement = db.compileStatement(sql);
-            statement.bindString(1, name);
-            statement.bindString(2, des);
-            statement.bindBlob(3, photo);
+            statement.bindString(1,id);
+            statement.bindString(2, ten);
+            statement.bindString(3, nhaxb);
+            statement.bindString(4, solan);
+            statement.bindDouble(5, gia);
+            statement.bindBlob(6, anh);
             statement.executeInsert();
             return true;
         } catch (Exception e) {

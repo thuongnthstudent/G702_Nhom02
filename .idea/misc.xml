@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Student/HK5/ThuongmaiDidong/Thuchanh/ThiGiuaKy/G702_Nhom02/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.2484375" />
         <entry key="..\:/Student/HK5/ThuongmaiDidong/Thuchanh/ThiGiuaKy/G702_Nhom02/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
+        <entry key="..\:/Student/HK5/ThuongmaiDidong/Thuchanh/ThiGiuaKy/G702_Nhom02/app/src/main/res/layout/activity_main2.xml" value="0.17300724637681159" />
+        <entry key="..\:/Student/HK5/ThuongmaiDidong/Thuchanh/ThiGiuaKy/G702_Nhom02/app/src/main/res/layout/bottom_sheet.xml" value="0.17300724637681159" />
         <entry key="..\:/Student/HK5/ThuongmaiDidong/Thuchanh/ThiGiuaKy/G702_Nhom02/app/src/main/res/layout/item_layout.xml" value="0.536" />
       </map>
     </option>
